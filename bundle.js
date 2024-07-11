@@ -76,6 +76,8 @@
     width: 100%;
     height: 35px;
 
+    margin: 0 0 5px 0;
+
     justify-content: center;
     align-items: center;
 `,bt=r.styled.div`
@@ -240,8 +242,6 @@
     width: 100%;
     height: 24px;
 
-    margin: 5px 0 0 0%;
-
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -278,7 +278,7 @@
 
     justify-content: center;
     align-items: center;
-`,Ot=({data:n})=>{const[r,a]=t.useState(!1),[o,i]=t.useState(!1),[s,c]=t.useState(!1),l=t.useRef(null),u=t.useRef(null),d=t.useRef(null),p=t.useRef(null),f=C(),h=e=>{l.current&&!l.current.contains(e.target)&&u.current&&!u.current.contains(e.target)&&a(!1),d.current&&!d.current.contains(e.target)&&p.current&&!p.current.contains(e.target)&&c(!1)};return t.useEffect((()=>(r?document.addEventListener("mousedown",h):document.removeEventListener("mousedown",h),()=>{document.removeEventListener("mousedown",h)})),[r]),t.useEffect((()=>(s?document.addEventListener("mousedown",h):document.removeEventListener("mousedown",h),()=>{document.removeEventListener("mousedown",h)})),[s]),(0,e.jsx)(e.Fragment,{children:(0,e.jsxs)(vt,{draggable:!0,onFadeOut:o,children:[(0,e.jsxs)(yt,{children:[(0,e.jsx)(bt,{checked:n.doneStatus,priority:n.priority,onClick:()=>{f(ot(n.id))}}),(0,e.jsx)(kt,{children:n.content}),(0,e.jsx)(wt,{onClick:()=>a((e=>!e)),activeButton:r,ref:u,children:(0,e.jsx)(_t,{src:"static/src/assets/images/icon-menu.png",activeButton:r})}),r&&(0,e.jsxs)(e.Fragment,{children:[(0,e.jsxs)(At,{ref:l,children:[(0,e.jsx)(xt,{activeButton:s,onClick:()=>c((e=>!e)),ref:p,children:(0,e.jsx)(Ct,{activeButton:s,src:lt})}),(0,e.jsx)(St,{onClick:()=>(a(!1),i(!0),void setTimeout((()=>{f(st(n.id))}),1e3))})]}),s&&(0,e.jsx)(Et,{children:(0,e.jsx)(ht,{ref:d,onSelect:()=>{},onClose:()=>c(!1)})})]})]}),(0,e.jsxs)(Dt,{children:[(0,e.jsx)(Pt,{children:(e=>{if(!e)return"";const t=new Date(e);return`${String(t.getDate()).padStart(2,"0")}/${String(t.getMonth()+1).padStart(2,"0")}/${t.getFullYear()}`})(n.targetDate)}),(0,e.jsx)(Mt,{children:n.tags.map((t=>(0,e.jsx)(Tt,{children:"none"!==t?t:"Нет меток"},t)))})]})]})})},Nt=r.styled.div`
+`,Ot=({data:n})=>{const[r,a]=t.useState(!1),[o,i]=t.useState(!1),[s,c]=t.useState(!1),l=t.useRef(null),u=t.useRef(null),d=t.useRef(null),p=t.useRef(null),f=g((e=>e.showSub)),h=C(),m=e=>{l.current&&!l.current.contains(e.target)&&u.current&&!u.current.contains(e.target)&&a(!1),d.current&&!d.current.contains(e.target)&&p.current&&!p.current.contains(e.target)&&c(!1)};return t.useEffect((()=>(r?document.addEventListener("mousedown",m):document.removeEventListener("mousedown",m),()=>{document.removeEventListener("mousedown",m)})),[r]),t.useEffect((()=>(s?document.addEventListener("mousedown",m):document.removeEventListener("mousedown",m),()=>{document.removeEventListener("mousedown",m)})),[s]),(0,e.jsx)(e.Fragment,{children:(0,e.jsxs)(vt,{draggable:!0,onFadeOut:o,children:[(0,e.jsxs)(yt,{children:[(0,e.jsx)(bt,{checked:n.doneStatus,priority:n.priority,onClick:()=>{h(ot(n.id))}}),(0,e.jsx)(kt,{children:n.content}),(0,e.jsx)(wt,{onClick:()=>a((e=>!e)),activeButton:r,ref:u,children:(0,e.jsx)(_t,{src:"static/src/assets/images/icon-menu.png",activeButton:r})}),r&&(0,e.jsxs)(e.Fragment,{children:[(0,e.jsxs)(At,{ref:l,children:[(0,e.jsx)(xt,{activeButton:s,onClick:()=>c((e=>!e)),ref:p,children:(0,e.jsx)(Ct,{activeButton:s,src:lt})}),(0,e.jsx)(St,{onClick:()=>(a(!1),i(!0),void setTimeout((()=>{h(st(n.id))}),1e3))})]}),s&&(0,e.jsx)(Et,{children:(0,e.jsx)(ht,{ref:d,onSelect:()=>{},onClose:()=>c(!1)})})]})]}),f&&(0,e.jsxs)(Dt,{children:[(0,e.jsx)(Pt,{children:(e=>{if(!e)return"";const t=new Date(e);return`${String(t.getDate()).padStart(2,"0")}/${String(t.getMonth()+1).padStart(2,"0")}/${t.getFullYear()}`})(n.targetDate)}),(0,e.jsx)(Mt,{children:n.tags.map((t=>(0,e.jsx)(Tt,{children:"none"!==t?t:"Нет меток"},t)))})]})]})})},Nt=r.styled.div`
     display: flex;
 
     flex-direction: column;
@@ -387,7 +387,7 @@
     position: absolute;
     right: -5px;
     top: -1px;
-`,Yn=()=>{const[n,r]=t.useState(""),[a,o]=t.useState(null),[i,s]=t.useState(!1),[c,l]=t.useState("none"),u=t.useRef(null),d=t.useRef(null),p=t.useRef(null),f=C(),h=e=>{d.current&&!d.current.contains(e.target)&&p.current&&!p.current.contains(e.target)&&s(!1)};return t.useEffect((()=>(i?document.addEventListener("mousedown",h):document.removeEventListener("mousedown",h),()=>{document.removeEventListener("mousedown",h)})),[i]),(0,e.jsxs)(Bn,{priority:c,children:[(0,e.jsx)(In,{ref:u,onKeyDown:e=>{"Enter"===e.key&&(()=>{var e,t;if(n){const i=null!==(e=n.match(/#[\p{L}\p{N}_]+/gu))&&void 0!==e?e:["none"],s=n.replace(/#[\p{L}\p{N}_]+/gu,"").trim(),u=i.sort(((e,t)=>e.localeCompare(t))),d={key:Vt(),data:{id:Vt(),content:s,priority:c,doneStatus:!1,tags:u,timeOfCreation:(new Date).toString(),timeOfCompletion:null,targetDate:null!==(t=null==a?void 0:a.toString())&&void 0!==t?t:null,type:"parent",childrenKeys:[]}};f(at(d)),f(Lt(u)),r(""),l("none"),o(null)}})()},type:"text",value:n,onChange:e=>r(e.target.value)}),(0,e.jsx)(Nn,{value:a,onChange:e=>{var t;o(e),null===(t=u.current)||void 0===t||t.focus()}}),(0,e.jsx)(Rn,{ref:p,onClick:()=>s((e=>!e)),title:"Приоритет",activeButton:i,children:(0,e.jsx)(Ln,{src:lt,activeButton:i})}),i&&(0,e.jsx)(Fn,{children:(0,e.jsx)(ht,{ref:d,onSelect:e=>{var t;l(e),s(!1),null===(t=u.current)||void 0===t||t.focus()},onClose:()=>s(!1)})})]})},zn=$e({name:"groupSwitch",initialState:"none",reducers:{switchGroupCase:(e,t)=>t.payload}}),{switchGroupCase:Wn}=zn.actions,jn=zn.reducer,Hn=r.styled.div`
+`,Yn=()=>{const[n,r]=t.useState(""),[a,o]=t.useState(null),[i,s]=t.useState(!1),[c,l]=t.useState("none"),u=t.useRef(null),d=t.useRef(null),p=t.useRef(null),f=C(),h=e=>{d.current&&!d.current.contains(e.target)&&p.current&&!p.current.contains(e.target)&&s(!1)};return t.useEffect((()=>(i?document.addEventListener("mousedown",h):document.removeEventListener("mousedown",h),()=>{document.removeEventListener("mousedown",h)})),[i]),(0,e.jsxs)(Bn,{priority:c,children:[(0,e.jsx)(In,{ref:u,onKeyDown:e=>{"Enter"===e.key&&(()=>{var e,t;if(n){const i=null!==(e=n.match(/#[\p{L}\p{N}_]+/gu))&&void 0!==e?e:["none"],s=n.replace(/#[\p{L}\p{N}_]+/gu,"").trim(),u=i.sort(((e,t)=>e.localeCompare(t))),d={key:Vt(),data:{id:Vt(),content:s,priority:c,doneStatus:!1,tags:u,timeOfCreation:(new Date).toString(),timeOfCompletion:null,targetDate:null!==(t=null==a?void 0:a.toString())&&void 0!==t?t:null,type:"parent",childrenKeys:[]}};f(at(d)),f(Lt(u)),r(""),l("none"),o(null)}})()},type:"text",value:n,onChange:e=>r(e.target.value)}),(0,e.jsx)(Nn,{value:a,onChange:e=>{var t;o(e),null===(t=u.current)||void 0===t||t.focus()}}),(0,e.jsx)(Rn,{ref:p,onClick:()=>s((e=>!e)),title:"Приоритет",activeButton:i,children:(0,e.jsx)(Ln,{src:lt,activeButton:i})}),i&&(0,e.jsx)(Fn,{children:(0,e.jsx)(ht,{ref:d,onSelect:e=>{var t;l(e),s(!1),null===(t=u.current)||void 0===t||t.focus()},onClose:()=>s(!1)})})]})},zn=$e({name:"groupSwitch",initialState:"none",reducers:{switchGroupCase:(e,t)=>t.payload}}),{switchGroupCase:Wn}=zn.actions,jn=zn.reducer,Hn=$e({name:"showSub",initialState:!1,reducers:{switchShow:e=>!e}}),{switchShow:qn}=Hn.actions,Un=Hn.reducer,Vn=r.styled.div`
     z-index: 100;
     position: relative;
 
@@ -397,7 +397,34 @@
     justify-content: end;
 
     user-select: none;
-`,qn=r.styled.div`
+`,Qn=r.styled.div`
+    position: relative;
+    right: 34px;
+
+    width: 25px;
+    height: 25px;
+
+    margin: 5px 0 0 0;
+
+    border: 1px solid #535353;
+    border-radius: 3px;
+
+    align-self: flex-end;
+
+    transition: 0.5s ease;
+
+    cursor: pointer;
+
+    ${({activeButton:e})=>e?r.css`
+                  background: no-repeat center/80% url(${"static/src/assets/images/icon-show.png"});
+              `:r.css`
+                  background: no-repeat center/80% url(${"static/src/assets/images/icon-hide.png"});
+              `}
+
+    &:hover {
+        opacity: 0.7;
+    }
+`,$n=r.styled.div`
     position: relative;
 
     width: 25px;
@@ -425,7 +452,7 @@
     &:hover {
         opacity: 0.7;
     }
-`,Un=r.styled.div`
+`,Kn=r.styled.div`
     position: absolute;
     right: -215px;
     top: 25px;
@@ -444,7 +471,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-`,Vn=r.styled.button`
+`,Gn=r.styled.button`
     display: flex;
     width: 100%;
     height: 25px;
@@ -474,7 +501,7 @@
     &:hover {
         opacity: 0.7;
     }
-`,Qn=r.styled.div`
+`,Xn=r.styled.div`
     position: relative;
 
     display: flex;
@@ -487,7 +514,7 @@
 
     justify-content: center;
     align-items: center;
-`,$n=r.styled.div`
+`,Zn=r.styled.div`
     position: absolute;
     left: 100px;
     top: 30px;
@@ -506,7 +533,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-`,Kn=r.styled.div`
+`,Jn=r.styled.div`
     position: absolute;
     left: 100px;
     top: 60px;
@@ -525,7 +552,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-`,Gn=r.styled.button`
+`,er=r.styled.button`
     display: flex;
     width: 100%;
     height: 25px;
@@ -547,7 +574,7 @@
     &:hover {
         opacity: 0.7;
     }
-`,Xn=()=>{const[n,r]=t.useState("Нет"),[a,o]=t.useState("Дата добавления"),i=t.useRef(null),s=t.useRef(null),c=C(),[l,u]=t.useState({CaseContainerVisible:!1,groupVisible:!1,sortVisible:!1}),d=e=>{u((t=>{const n=Object.assign(Object.assign({},t),{groupVisible:!1,sortVisible:!1});return"CaseContainerVisible"===e?n.CaseContainerVisible=!t.CaseContainerVisible:(n.CaseContainerVisible=!0,n[e]=!t[e]),n}))},p=e=>{i.current&&!i.current.contains(e.target)&&s.current&&!s.current.contains(e.target)&&u({CaseContainerVisible:!1,sortVisible:!1,groupVisible:!1})};t.useEffect((()=>(l.CaseContainerVisible?document.addEventListener("mousedown",p):document.removeEventListener("mousedown",p),()=>{document.removeEventListener("mousedown",p)})),[l.CaseContainerVisible]);const f=e=>{c(Wn(e)),r(m[e]),u(Object.assign(Object.assign({},l),{groupVisible:!1}))},h=e=>{c(it(e)),o(g[e]),u(Object.assign(Object.assign({},l),{sortVisible:!1}))},m={date:"Дата выполнения",priority:"Приоритет",tag:"Метка",none:"Нет"},g={date:"Дата выполнения",name:"Имя",tag:"Метка",priority:"Приоритет",none:"Дата добавления"};return(0,e.jsx)(e.Fragment,{children:(0,e.jsxs)(Hn,{children:[(0,e.jsx)(qn,{activeButton:l.CaseContainerVisible,ref:s,onClick:()=>d("CaseContainerVisible")}),l.CaseContainerVisible&&(0,e.jsxs)(Un,{ref:i,children:[(0,e.jsxs)(Vn,{activeButton:l.groupVisible,onClick:()=>d("groupVisible"),children:["Группировать ",(0,e.jsx)(Qn,{children:n})]}),(0,e.jsxs)(Vn,{activeButton:l.sortVisible,onClick:()=>d("sortVisible"),children:["Сортировать ",(0,e.jsx)(Qn,{children:a})]}),l.groupVisible&&(0,e.jsxs)($n,{children:[(0,e.jsx)(Gn,{onClick:()=>f("none"),children:"Нет"}),(0,e.jsx)(Gn,{onClick:()=>f("date"),children:"Дата выполнения"}),(0,e.jsx)(Gn,{onClick:()=>f("tag"),children:"Метка"}),(0,e.jsx)(Gn,{onClick:()=>f("priority"),children:"Приортитет"})]}),l.sortVisible&&(0,e.jsxs)(Kn,{children:[(0,e.jsx)(Gn,{onClick:()=>h("none"),children:"Дата добавления"}),(0,e.jsx)(Gn,{onClick:()=>h("date"),children:"Дата выполнения"}),(0,e.jsx)(Gn,{onClick:()=>h("name"),children:"Имя"}),(0,e.jsx)(Gn,{onClick:()=>h("tag"),children:"Метка"}),(0,e.jsx)(Gn,{onClick:()=>h("priority"),children:"Приоритет"})]})]})]})})},Zn=r.styled.div`
+`,tr=()=>{const[n,r]=t.useState("Нет"),[a,o]=t.useState("Дата добавления"),i=t.useRef(null),s=t.useRef(null),c=g((e=>e.showSub)),l=C(),[u,d]=t.useState({CaseContainerVisible:!1,groupVisible:!1,sortVisible:!1}),p=e=>{d((t=>{const n=Object.assign(Object.assign({},t),{groupVisible:!1,sortVisible:!1});return"CaseContainerVisible"===e?n.CaseContainerVisible=!t.CaseContainerVisible:(n.CaseContainerVisible=!0,n[e]=!t[e]),n}))},f=e=>{i.current&&!i.current.contains(e.target)&&s.current&&!s.current.contains(e.target)&&d({CaseContainerVisible:!1,sortVisible:!1,groupVisible:!1})};t.useEffect((()=>(u.CaseContainerVisible?document.addEventListener("mousedown",f):document.removeEventListener("mousedown",f),()=>{document.removeEventListener("mousedown",f)})),[u.CaseContainerVisible]);const h=e=>{l(Wn(e)),r(v[e]),d(Object.assign(Object.assign({},u),{groupVisible:!1}))},m=e=>{l(it(e)),o(y[e]),d(Object.assign(Object.assign({},u),{sortVisible:!1}))},v={date:"Дата выполнения",priority:"Приоритет",tag:"Метка",none:"Нет"},y={date:"Дата выполнения",name:"Имя",tag:"Метка",priority:"Приоритет",none:"Дата добавления"};return(0,e.jsx)(e.Fragment,{children:(0,e.jsxs)(Vn,{children:[(0,e.jsx)(Qn,{activeButton:c,onClick:()=>{l(qn())}}),(0,e.jsx)($n,{activeButton:u.CaseContainerVisible,ref:s,onClick:()=>p("CaseContainerVisible")}),u.CaseContainerVisible&&(0,e.jsxs)(Kn,{ref:i,children:[(0,e.jsxs)(Gn,{activeButton:u.groupVisible,onClick:()=>p("groupVisible"),children:["Группировать ",(0,e.jsx)(Xn,{children:n})]}),(0,e.jsxs)(Gn,{activeButton:u.sortVisible,onClick:()=>p("sortVisible"),children:["Сортировать ",(0,e.jsx)(Xn,{children:a})]}),u.groupVisible&&(0,e.jsxs)(Zn,{children:[(0,e.jsx)(er,{onClick:()=>h("none"),children:"Нет"}),(0,e.jsx)(er,{onClick:()=>h("date"),children:"Дата выполнения"}),(0,e.jsx)(er,{onClick:()=>h("tag"),children:"Метка"}),(0,e.jsx)(er,{onClick:()=>h("priority"),children:"Приортитет"})]}),u.sortVisible&&(0,e.jsxs)(Jn,{children:[(0,e.jsx)(er,{onClick:()=>m("none"),children:"Дата добавления"}),(0,e.jsx)(er,{onClick:()=>m("date"),children:"Дата выполнения"}),(0,e.jsx)(er,{onClick:()=>m("name"),children:"Имя"}),(0,e.jsx)(er,{onClick:()=>m("tag"),children:"Метка"}),(0,e.jsx)(er,{onClick:()=>m("priority"),children:"Приоритет"})]})]})]})})},nr=r.styled.div`
     z-index: 200;
     position: relative;
     right: 30px;
@@ -558,7 +585,7 @@
     justify-content: end;
 
     user-select: none;
-`,Jn=r.styled.div`
+`,rr=r.styled.div`
     position: absolute;
     width: 25px;
     height: 25px;
@@ -584,7 +611,7 @@
               `:r.css`
                   background-color: none;
               `}
-`,er=r.styled.img`
+`,ar=r.styled.img`
     width: 100%;
     height: 100%;
 
@@ -595,7 +622,7 @@
               `:r.css`
                   transform: rotate(90deg);
               `}
-`,tr=r.styled.div`
+`,or=r.styled.div`
     position: absolute;
     right: -208px;
     top: 25px;
@@ -614,7 +641,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-`,nr=r.styled.div`
+`,ir=r.styled.div`
     display: flex;
     width: auto;
     height: 18px;
@@ -627,7 +654,7 @@
 
     justify-content: center;
     align-items: center;
-`,rr=()=>{const[n,r]=t.useState(!1),a=t.useRef(null),o=t.useRef(null),i=g((e=>e.hashtags)),s=e=>{o.current&&!o.current.contains(e.target)&&a.current&&!a.current.contains(e.target)&&r(!1)};return t.useEffect((()=>(n?document.addEventListener("mousedown",s):document.removeEventListener("mousedown",s),()=>{document.removeEventListener("mousedown",s)})),[n]),(0,e.jsx)(e.Fragment,{children:(0,e.jsxs)(Zn,{children:[(0,e.jsx)(Jn,{ref:a,onClick:()=>{r((e=>!e))},activeButton:n,children:(0,e.jsx)(er,{src:"static/src/assets/images/icon-hash.png",activeButton:n})}),n&&(0,e.jsx)(tr,{ref:o,children:i.map((t=>(0,e.jsx)(nr,{children:t},t)))})]})})},ar=r.styled.div`
+`,sr=()=>{const[n,r]=t.useState(!1),a=t.useRef(null),o=t.useRef(null),i=g((e=>e.hashtags)),s=e=>{o.current&&!o.current.contains(e.target)&&a.current&&!a.current.contains(e.target)&&r(!1)};return t.useEffect((()=>(n?document.addEventListener("mousedown",s):document.removeEventListener("mousedown",s),()=>{document.removeEventListener("mousedown",s)})),[n]),(0,e.jsx)(e.Fragment,{children:(0,e.jsxs)(nr,{children:[(0,e.jsx)(rr,{ref:a,onClick:()=>{r((e=>!e))},activeButton:n,children:(0,e.jsx)(ar,{src:"static/src/assets/images/icon-hash.png",activeButton:n})}),n&&(0,e.jsx)(or,{ref:o,children:i.map((t=>(0,e.jsx)(ir,{children:t},t)))})]})})},cr=r.styled.div`
     position: absolute;
     top: 30px;
     left: 50%;
@@ -647,7 +674,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-items: flex-start;
-`,or=r.styled.div`
+`,lr=r.styled.div`
     display: flex;
     margin: 20px 0 25px 0;
 
@@ -659,5 +686,5 @@
     align-items: center;
 
     user-select: none;
-`,ir=()=>(0,e.jsx)(e.Fragment,{children:(0,e.jsxs)(ar,{children:[(0,e.jsx)(or,{children:"TodoApp"}),(0,e.jsx)(Yn,{}),(0,e.jsx)(rr,{}),(0,e.jsx)(Xn,{}),(0,e.jsx)(It,{})]})});var sr=a(6523),cr={};cr.styleTagTransform=Cn(),cr.setAttributes=wn(),cr.insert=bn().bind(null,"head"),cr.domAPI=vn(),cr.insertStyleElement=An(),mn()(sr.A,cr),sr.A&&sr.A.locals&&sr.A.locals;var lr=a(2409);const ur=function(e){const t=function(e){const{thunk:t=!0,immutableCheck:n=!0,serializableCheck:r=!0,actionCreatorCheck:a=!0}=e??{};let o=new Le;return t&&("boolean"==typeof t?o.push(Ne):o.push(Be(t.extraArgument))),o},{reducer:n,middleware:r,devTools:a=!0,preloadedState:o,enhancers:i}=e||{};let s,c;if("function"==typeof n)s=n;else{if(!Pe(n))throw new Error(nt(1));s=function(e){const t=Object.keys(e),n={};for(let r=0;r<t.length;r++){const a=t[r];"function"==typeof e[a]&&(n[a]=e[a])}const r=Object.keys(n);let a;try{!function(e){Object.keys(e).forEach((t=>{const n=e[t];if(void 0===n(void 0,{type:De.INIT}))throw new Error(Ce(12));if(void 0===n(void 0,{type:De.PROBE_UNKNOWN_ACTION()}))throw new Error(Ce(13))}))}(n)}catch(e){a=e}return function(e={},t){if(a)throw a;let o=!1;const i={};for(let a=0;a<r.length;a++){const s=r[a],c=n[s],l=e[s],u=c(l,t);if(void 0===u)throw t&&t.type,new Error(Ce(14));i[s]=u,o=o||u!==l}return o=o||r.length!==Object.keys(e).length,o?i:e}}(n)}c="function"==typeof r?r(t):t();let l=Te;a&&(l=Ie({trace:!1,..."object"==typeof a&&a}));const u=function(...e){return t=>(n,r)=>{const a=t(n,r);let o=()=>{throw new Error(Ce(15))};const i={getState:a.getState,dispatch:(e,...t)=>o(e,...t)},s=e.map((e=>e(i)));return o=Te(...s)(a.dispatch),{...a,dispatch:o}}}(...c),d=(e=>function(t){const{autoBatch:n=!0}=t??{};let r=new Le(e);return n&&r.push(((e={type:"raf"})=>t=>(...n)=>{const r=t(...n);let a=!0,o=!1,i=!1;const s=new Set,c="tick"===e.type?queueMicrotask:"raf"===e.type?We:"callback"===e.type?e.queueNotification:ze(e.timeout),l=()=>{i=!1,o&&(o=!1,s.forEach((e=>e())))};return Object.assign({},r,{subscribe(e){const t=r.subscribe((()=>a&&e()));return s.add(e),()=>{t(),s.delete(e)}},dispatch(e){try{return a=!e?.meta?.RTK_autoBatch,o=!a,o&&(i||(i=!0,c(l))),r.dispatch(e)}finally{a=!0}}})})("object"==typeof n?n:void 0)),r})(u);return Me(s,o,l(..."function"==typeof i?i(d):d()))}({reducer:{todos:ct,groupSwitch:jn,hashtags:Ft}}),dr=ur,pr=document.getElementById("root");if(!pr)throw new Error("Root element not found");n.createRoot(pr).render((0,e.jsx)(t.StrictMode,{children:(0,e.jsxs)((function({store:e,context:t,children:n,serverState:r,stabilityCheck:a="once",identityFunctionCheck:o="once"}){const s=i.useMemo((()=>{const t=function(e,t){let n,r=v,a=0,o=!1;function i(){l.onStateChange&&l.onStateChange()}function s(){a++,n||(n=t?t.addNestedSub(i):e.subscribe(i),r=function(){let e=null,t=null;return{clear(){e=null,t=null},notify(){(()=>{let t=e;for(;t;)t.callback(),t=t.next})()},get(){const t=[];let n=e;for(;n;)t.push(n),n=n.next;return t},subscribe(n){let r=!0;const a=t={callback:n,next:null,prev:t};return a.prev?a.prev.next=a:e=a,function(){r&&null!==e&&(r=!1,a.next?a.next.prev=a.prev:t=a.prev,a.prev?a.prev.next=a.next:e=a.next)}}}}())}function c(){a--,n&&0===a&&(n(),n=void 0,r.clear(),r=v)}const l={addNestedSub:function(e){s();const t=r.subscribe(e);let n=!1;return()=>{n||(n=!0,t(),c())}},notifyNestedSubs:function(){r.notify()},handleChangeWrapper:i,isSubscribed:function(){return o},trySubscribe:function(){o||(o=!0,s())},tryUnsubscribe:function(){o&&(o=!1,c())},getListeners:()=>r};return l}(e);return{store:e,subscription:t,getServerState:r?()=>r:void 0,stabilityCheck:a,identityFunctionCheck:o}}),[e,r,a,o]),c=i.useMemo((()=>e.getState()),[e]);k((()=>{const{subscription:t}=s;return t.onStateChange=t.notifyNestedSubs,t.trySubscribe(),c!==e.getState()&&t.notifyNestedSubs(),()=>{t.tryUnsubscribe(),t.onStateChange=void 0}}),[s,c]);const l=t||u;return i.createElement(l.Provider,{value:s},n)}),{store:dr,children:[(0,e.jsx)(lr.SS,{}),(0,e.jsx)((()=>(0,e.jsx)(ir,{})),{})]})}))})()})();
+`,ur=()=>(0,e.jsx)(e.Fragment,{children:(0,e.jsxs)(cr,{children:[(0,e.jsx)(lr,{children:"TodoApp"}),(0,e.jsx)(Yn,{}),(0,e.jsx)(sr,{}),(0,e.jsx)(tr,{}),(0,e.jsx)(It,{})]})});var dr=a(6523),pr={};pr.styleTagTransform=Cn(),pr.setAttributes=wn(),pr.insert=bn().bind(null,"head"),pr.domAPI=vn(),pr.insertStyleElement=An(),mn()(dr.A,pr),dr.A&&dr.A.locals&&dr.A.locals;var fr=a(2409);const hr=function(e){const t=function(e){const{thunk:t=!0,immutableCheck:n=!0,serializableCheck:r=!0,actionCreatorCheck:a=!0}=e??{};let o=new Le;return t&&("boolean"==typeof t?o.push(Ne):o.push(Be(t.extraArgument))),o},{reducer:n,middleware:r,devTools:a=!0,preloadedState:o,enhancers:i}=e||{};let s,c;if("function"==typeof n)s=n;else{if(!Pe(n))throw new Error(nt(1));s=function(e){const t=Object.keys(e),n={};for(let r=0;r<t.length;r++){const a=t[r];"function"==typeof e[a]&&(n[a]=e[a])}const r=Object.keys(n);let a;try{!function(e){Object.keys(e).forEach((t=>{const n=e[t];if(void 0===n(void 0,{type:De.INIT}))throw new Error(Ce(12));if(void 0===n(void 0,{type:De.PROBE_UNKNOWN_ACTION()}))throw new Error(Ce(13))}))}(n)}catch(e){a=e}return function(e={},t){if(a)throw a;let o=!1;const i={};for(let a=0;a<r.length;a++){const s=r[a],c=n[s],l=e[s],u=c(l,t);if(void 0===u)throw t&&t.type,new Error(Ce(14));i[s]=u,o=o||u!==l}return o=o||r.length!==Object.keys(e).length,o?i:e}}(n)}c="function"==typeof r?r(t):t();let l=Te;a&&(l=Ie({trace:!1,..."object"==typeof a&&a}));const u=function(...e){return t=>(n,r)=>{const a=t(n,r);let o=()=>{throw new Error(Ce(15))};const i={getState:a.getState,dispatch:(e,...t)=>o(e,...t)},s=e.map((e=>e(i)));return o=Te(...s)(a.dispatch),{...a,dispatch:o}}}(...c),d=(e=>function(t){const{autoBatch:n=!0}=t??{};let r=new Le(e);return n&&r.push(((e={type:"raf"})=>t=>(...n)=>{const r=t(...n);let a=!0,o=!1,i=!1;const s=new Set,c="tick"===e.type?queueMicrotask:"raf"===e.type?We:"callback"===e.type?e.queueNotification:ze(e.timeout),l=()=>{i=!1,o&&(o=!1,s.forEach((e=>e())))};return Object.assign({},r,{subscribe(e){const t=r.subscribe((()=>a&&e()));return s.add(e),()=>{t(),s.delete(e)}},dispatch(e){try{return a=!e?.meta?.RTK_autoBatch,o=!a,o&&(i||(i=!0,c(l))),r.dispatch(e)}finally{a=!0}}})})("object"==typeof n?n:void 0)),r})(u);return Me(s,o,l(..."function"==typeof i?i(d):d()))}({reducer:{todos:ct,groupSwitch:jn,hashtags:Ft,showSub:Un}}),mr=hr,gr=document.getElementById("root");if(!gr)throw new Error("Root element not found");n.createRoot(gr).render((0,e.jsx)(t.StrictMode,{children:(0,e.jsxs)((function({store:e,context:t,children:n,serverState:r,stabilityCheck:a="once",identityFunctionCheck:o="once"}){const s=i.useMemo((()=>{const t=function(e,t){let n,r=v,a=0,o=!1;function i(){l.onStateChange&&l.onStateChange()}function s(){a++,n||(n=t?t.addNestedSub(i):e.subscribe(i),r=function(){let e=null,t=null;return{clear(){e=null,t=null},notify(){(()=>{let t=e;for(;t;)t.callback(),t=t.next})()},get(){const t=[];let n=e;for(;n;)t.push(n),n=n.next;return t},subscribe(n){let r=!0;const a=t={callback:n,next:null,prev:t};return a.prev?a.prev.next=a:e=a,function(){r&&null!==e&&(r=!1,a.next?a.next.prev=a.prev:t=a.prev,a.prev?a.prev.next=a.next:e=a.next)}}}}())}function c(){a--,n&&0===a&&(n(),n=void 0,r.clear(),r=v)}const l={addNestedSub:function(e){s();const t=r.subscribe(e);let n=!1;return()=>{n||(n=!0,t(),c())}},notifyNestedSubs:function(){r.notify()},handleChangeWrapper:i,isSubscribed:function(){return o},trySubscribe:function(){o||(o=!0,s())},tryUnsubscribe:function(){o&&(o=!1,c())},getListeners:()=>r};return l}(e);return{store:e,subscription:t,getServerState:r?()=>r:void 0,stabilityCheck:a,identityFunctionCheck:o}}),[e,r,a,o]),c=i.useMemo((()=>e.getState()),[e]);k((()=>{const{subscription:t}=s;return t.onStateChange=t.notifyNestedSubs,t.trySubscribe(),c!==e.getState()&&t.notifyNestedSubs(),()=>{t.tryUnsubscribe(),t.onStateChange=void 0}}),[s,c]);const l=t||u;return i.createElement(l.Provider,{value:s},n)}),{store:mr,children:[(0,e.jsx)(fr.SS,{}),(0,e.jsx)((()=>(0,e.jsx)(ur,{})),{})]})}))})()})();
 //# sourceMappingURL=bundle.js.map
