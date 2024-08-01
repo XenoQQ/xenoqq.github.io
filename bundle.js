@@ -231,7 +231,7 @@
     background-color: transparent;
 
     font-family: 'Ubuntu', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     color: ${({$checked:e})=>e?"#535353":"#bebebe"};
 
     text-decoration: ${({$checked:e})=>e?"line-through":"none"};
@@ -555,7 +555,7 @@
     margin-left: 10px;
 
     font-family: ${({theme:e})=>e.typography.fontFamily};
-    font-size: 15px;
+    font-size: 16px;
     color: ${({theme:e})=>e.colors.activeTextColor};
 
     background-color: ${({theme:e})=>e.colors.backgroundColor};
@@ -862,6 +862,7 @@
         min-height: 100vh;
         top: 0px;
         border-radius: 0px;
+        padding: 0 2.5vw;
     }
 `,xh=r.styled.h1`
     display: flex;
