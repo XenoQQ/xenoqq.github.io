@@ -1,0 +1,16 @@
+var _path;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+const SvgShowIcon = props => /*#__PURE__*/React.createElement("svg", _extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 22,
+  height: 16,
+  fill: "none"
+}, props), _path || (_path = /*#__PURE__*/React.createElement("path", {
+  stroke: "#808185",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  strokeWidth: 1.5,
+  d: "M9.73 1.073A11 11 0 0 1 11 1c4.664 0 8.4 2.903 10 7a11.6 11.6 0 0 1-1.555 2.788M5.52 2.519C3.48 3.764 1.9 5.693 1 8c1.6 4.097 5.336 7 10 7a10.44 10.44 0 0 0 5.48-1.52M8.88 5.88a3 3 0 1 0 4.243 4.243"
+})));
+export default SvgShowIcon;
