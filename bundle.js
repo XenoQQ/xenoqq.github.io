@@ -316,6 +316,10 @@
 
     border-radius: 16px;
     box-shadow: 0px 4px 20px 0px #00000014;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 `,Ra=Qe.styled.div`
     position: absolute;
     height: 12px;
