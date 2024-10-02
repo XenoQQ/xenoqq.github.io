@@ -345,6 +345,7 @@
     @media (max-width: 768px) {
         box-sizing: border-box;
         width: 100%;
+        top: 64px;
         padding: 16px;
         left: 0;
         transform: translate(0, 0);
